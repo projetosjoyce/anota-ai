@@ -1,0 +1,25 @@
+<div class="dashboard-container">
+  <mat-card class="dashboard-card">
+    <h2 class="dashboard-title">Dashboard Administrativo</h2>
+    <mat-grid-list cols="3" rowHeight="200px">
+      <mat-grid-tile>
+        <mat-card class="info-card" [routerLink]="['/cadastro-usuarios']" style="cursor: pointer;">
+          <span class="material-icons icon">person_add</span>
+          <h3 class="card-title">Cadastro de Usuários</h3>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="info-card" [routerLink]="['/agenda-digital']" style="cursor: pointer;">
+          <span class="material-icons icon">calendar_today</span>
+          <h3 class="card-title">Agenda Digital</h3>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="info-card">
+          <span class="material-icons icon">checklist</span>
+          <h3 class="card-title">Lista de Tarefas</h3>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card>
+</div>

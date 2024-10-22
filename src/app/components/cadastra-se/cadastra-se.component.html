@@ -1,0 +1,28 @@
+<div class="full-screen">
+  <mat-card style="max-width: 400px; background-color: white;">
+    <mat-card-title>Cadastrar-se</mat-card-title>
+    <mat-card-content>
+      <form>
+        <!-- Campo de Usuário -->
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Usuário</mat-label>
+          <input matInput placeholder="Digite seu usuário" required>
+        </mat-form-field>
+
+        <!-- Campo de Senha -->
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Senha</mat-label>
+          <input matInput type="password" placeholder="Digite sua senha" required>
+        </mat-form-field>
+
+        <!-- Checkbox de Administrador -->
+        <mat-checkbox>É administrador?</mat-checkbox>
+      </form>
+    </mat-card-content>
+
+    <!-- Botão de Enviar -->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" style="width: 100%;">Cadastrar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

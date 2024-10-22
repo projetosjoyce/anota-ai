@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="card-wrapper">
+    <!-- Cadastro Form -->
+    <mat-card class="form-card">
+      <h2 class="card-title">Cadastro</h2>
+
+      <mat-form-field appearance="fill" class="w-full mb-4">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Digite o nome" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="w-full mb-4">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Digite o Email" />
+      </mat-form-field>
+
+      <mat-checkbox class="mb-4">Acesso Administrador</mat-checkbox>
+
+      <button mat-raised-button color="primary" class="w-full">Cadastrar</button>
+    </mat-card>
+
+    <!-- User List Table in a Card -->
+    <mat-card class="user-list-card">
+      <h2 class="card-title">Lista de Usuários</h2>
+
+      <table mat-table [dataSource]="orders" class="w-full">
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Nome </th>
+          <td mat-cell *matCellDef="let order"> {{ order.name }} </td>
+        </ng-container>
+
+        <!-- Email Column -->
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let order"> {{ order.email }} </td>
+        </ng-container>
+
+        <!-- Permission Column -->
+        <ng-container matColumnDef="permission">
+          <th mat-header-cell *matHeaderCellDef> Permissão </th>
+          <td mat-cell *matCellDef="let order"> {{ order.permission }} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['name', 'email', 'permission']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['name', 'email', 'permission'];"></tr>
+      </table>
+    </mat-card>
+  </div>
+</div>
+
+<!-- Exemplo de botão fora dos cards -->
+<div class="button-wrapper">
+  <button mat-raised-button color="primary">
+    Botão Exemplo
+  </button>
+</div>

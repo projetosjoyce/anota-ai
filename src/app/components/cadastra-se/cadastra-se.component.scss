@@ -1,0 +1,8 @@
+/* styles.scss ou styles.css */
+.full-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 100% da altura da viewport */
+  background-color: #f7fafc; /* Cor de fundo */
+}
